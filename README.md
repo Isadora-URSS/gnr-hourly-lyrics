@@ -1,2 +1,3 @@
 # gnr-hourly-lyrics
-This Twitter bot posts random Guns N' Roses verses from musics hourly
+This is my personal Twitter bot that posts Guns N' Roses quotes from musics every hour. I'M NOT, BY ANY WAY, RELATED TO GUNS N' ROSES, AND I WOULD FREELY REMOVE MY APP FROM RUNNING IF NEEDED TO DO SO.
+
