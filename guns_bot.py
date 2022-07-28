@@ -109,12 +109,12 @@ def tweet_a_verse():
     text_info = f"{verse['name']} from {verse['album']} - {verse['artist']}\n"\
     f"Listen to it here: {' '.join(verse['links'])}"
     answer_tweet(text_info, tweet['id'])
-    print("posted")
+    print("I've made a post.")
 
 if __name__ == "__main__":
     schedule.every().hour.at(":00").do(tweet_a_verse)
-    keep_alive()
-    print("script running.")
+    keep_alive() #This stuff is because of my host,aand isn't needed for running the bot itself
+    print("The script is running. Posts will be done at every hour.")
     while True:
         schedule.run_pending()
         time.sleep(1)
