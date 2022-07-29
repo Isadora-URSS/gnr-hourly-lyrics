@@ -4,7 +4,7 @@ import schedule                                             #Used for maintainin
 from keep_alive import keep_alive
 
 import os                                                   #For retrieving the credentials and acessing songs
-from urllib.parse import quote as percentage_encode         #Used to generate a OAuth valid string for Twitter authenticating
+from urllib.parse import quote as percentage_encode         #Used to generate an OAuth valid string for Twitter authenticating
 import base64                                               #Same purpose as above
 from hashlib import sha1                                    #Same purpose as above
 import hmac                                                 #Same purpose as above
