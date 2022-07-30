@@ -1,7 +1,7 @@
 import requests                                             #Used for doing actual http requests
 from dotenv import load_dotenv                              #That's for maintaing my bot credentials hidden
 import schedule                                             #Used for maintaining the tweet interval
-from keep_alive import keep_alive
+from keep_alive import keep_alive                           #Free host stuff lol i'm poor
 
 import os                                                   #For retrieving the credentials and acessing songs
 from urllib.parse import quote as percentage_encode         #Used to generate an OAuth valid string for Twitter authenticating
@@ -19,7 +19,8 @@ consumer_secret = os.getenv("twitter_consumer_secret")
 acess_token = os.getenv("twitter_acess_token")
 acess_secret = os.getenv("twitter_acess_secret")
 
-#This loads the possible songs (I fucking hate this file opening thing please god free me from needing to edit it for the rest of my life)
+#This loads the possible songs
+#(I fucking hate this file opening thing please god free me from needing to edit it for the rest of my life)
 songs = []
 for directory in os.walk("./"):
     for file in directory[2]:
@@ -27,7 +28,7 @@ for directory in os.walk("./"):
     songs = [*songs, *directory[2]]
 songs = list(filter(lambda f: f.endswith(".json"), songs))
 
-MULTIPLE_VERSES_PROB = 25
+MULTIPLE_VERSES_PROB = 35
 
 def build_oauth_header(base_url, method, request_parameters):
     """It's been some months since I did this thing. I don't fucking know if there's a lib
@@ -104,16 +105,25 @@ def return_random_line():
         return payload
 
 def tweet_a_verse():
+    """This function makes the tweet posting stuff alongside with picking a verse (all in one!)"""
     verse = return_random_line()
+    print(f"I'll post these lines: {verse['verse']} - from {verse['name']}")
     tweet = post_tweet(verse['verse'])
+    print(f"First response: {tweet}")
     text_info = f"{verse['name']} from {verse['album']} - {verse['artist']}\n"\
     f"Listen to it here: {' '.join(verse['links'])}"
-    answer_tweet(text_info, tweet['id'])
-    print("I've made a post.")
+    tweet = answer_tweet(text_info, tweet['id'])
+    print(f"Second response: {tweet}")
+    if verse['cover']:
+        text_info = f"This song is a cover. Original artist: {verse['cover_info']['artist']}\n"\
+        f"Listen to it here: {' '.join(verse['cover_info']['links'])}"
+        tweet = answer_tweet(text_info, tweet['id'])
+        print(f"Third response: {tweet}")
+    print("I've sucesfully made a post.")
 
 if __name__ == "__main__":
     schedule.every().hour.at(":00").do(tweet_a_verse)
-    keep_alive() #This stuff is because of my host,aand isn't needed for running the bot itself
+    keep_alive() #This stuff is because of my host, and isn't needed for running the bot itself
     print("The script is running. Posts will be done at every hour.")
     while True:
         schedule.run_pending()
