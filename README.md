@@ -6,11 +6,17 @@ from Guns N' Roses musics into the Twitter plataform.
 
 ## Album Coverage - Roadmap
 [x] Appetite for Destruction
+
 [x] G N' R Lies
+
 [x] Use Your Illusion I
+
 [ ] Use Your Illusion II
+
 [ ] Chinese Democracy
+
 [ ] The Spaghetti Incident?
+
 [ ] Leaked songs and demos
 
 #### Running and Forking
