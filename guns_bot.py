@@ -28,7 +28,7 @@ for directory in os.walk("./"):
     songs = [*songs, *directory[2]]
 songs = list(filter(lambda f: f.endswith(".json"), songs))
 
-MULTIPLE_VERSES_PROB = 35
+MULTIPLE_VERSES_PROB = 37
 
 def build_oauth_header(base_url, method, request_parameters):
     """It's been some months since I did this thing. I don't fucking know if there's a lib
@@ -106,20 +106,24 @@ def return_random_line():
 
 def tweet_a_verse():
     """This function makes the tweet posting stuff alongside with picking a verse (all in one!)"""
-    verse = return_random_line()
-    print(f"I'll post these lines: {verse['verse']} - from {verse['name']}")
-    tweet = post_tweet(verse['verse'])
-    print(f"First response: {tweet}")
-    text_info = f"{verse['name']} from {verse['album']} - {verse['artist']}\n"\
-    f"Listen to it here: {' '.join(verse['links'])}"
-    tweet = answer_tweet(text_info, tweet['id'])
-    print(f"Second response: {tweet}")
-    if verse['cover']:
-        text_info = f"This song is a cover. Original artist: {verse['cover_info']['artist']}\n"\
-        f"Listen to it here: {' '.join(verse['cover_info']['links'])}"
+    try:
+        verse = return_random_line()
+        print(f"I'll post these lines: {verse['verse']} - from {verse['name']}")
+        tweet = post_tweet(verse['verse'])
+        print(f"First response: {tweet}")
+        text_info = f"{verse['name']} from {verse['album']} - {verse['artist']}\n"\
+        f"Listen to it here: {' '.join(verse['links'])}"
         tweet = answer_tweet(text_info, tweet['id'])
-        print(f"Third response: {tweet}")
-    print("I've sucesfully made a post.")
+        print(f"Second response: {tweet}")
+        if verse['cover']:
+            text_info = f"This song is a cover. Original artist: {verse['cover_info']['artist']}\n"\
+            f"Listen to it here: {' '.join(verse['cover_info']['links'])}"
+            tweet = answer_tweet(text_info, tweet['id'])
+            print(f"Third response: {tweet}")
+        print("I've sucesfully made a post.")
+    except Exception as error:
+        print(f"Something went wrong. Ill try to post again... Error: {error}")
+        tweet_a_verse()
 
 if __name__ == "__main__":
     schedule.every().hour.at(":00").do(tweet_a_verse)
