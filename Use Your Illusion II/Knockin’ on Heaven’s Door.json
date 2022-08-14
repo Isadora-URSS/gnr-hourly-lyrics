@@ -1,0 +1,29 @@
+{
+    "name": "Knockin\u2019 on Heaven\u2019s Door",
+    "artist": "Guns N\u2019 Roses",
+    "album": "Use Your Illusion II",
+    "cover": true,
+    "cover_info": {
+        "artist": "Bob Dylan",
+        "links": [
+            "https://open.spotify.com/track/6HSXNV0b4M4cLJ7ljgVVeh",
+            "https://www.youtube.com/watch?v=rm9coqlk8fY"
+        ]
+    },
+    "links": [
+        "https://open.spotify.com/track/4JiEyzf0Md7KEFFGWDDdCr",
+        "https://youtube.com/watch?v=f8OHybVhQwc"
+    ],
+    "lyrics": "Mama, take this badge off of me\nIt\u2019s gettin\u2019 dark, too dark to see\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door\nMama, put my guns in the ground\nThat long black cloud is comin\u2019 down\n",
+    "combinations": [
+        "Mama, take this badge off of me\nI can\u2019t use it anymore",
+        "It\u2019s gettin\u2019 dark, too dark to see\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door",
+        "Mama, take this badge off of me\nI can\u2019t use it anymore\nIt\u2019s gettin\u2019 dark, too dark to see\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door",
+        "Knock, knock, knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door",
+        "Mama, put my guns in the ground\nI can\u2019t shoot them anymore",
+        "That long black cloud is comin\u2019 down\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door",
+        "Mama, put my guns in the ground\nI can\u2019t shoot them anymore\nThat long black cloud is comin\u2019 down\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door",
+        "That long black cloud is comin\u2019 down\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door",
+        "It\u2019s gettin\u2019 dark, too dark to see\nI feel like I\u2019m knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door\nKnock, knock, knockin\u2019 on heaven\u2019s door"
+    ]
+}

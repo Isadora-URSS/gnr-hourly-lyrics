@@ -1,0 +1,19 @@
+{
+    "name": "My World",
+    "artist": "Guns N\u2019 Roses",
+    "album": "Use Your Illusion II",
+    "cover": false,
+    "links": [
+        "https://open.spotify.com/track/4PFvlYJZOh2JwRbEXn93Vc",
+        "https://youtube.com/watch?v=sLxUrMb8rFU"
+    ],
+    "lyrics": "You wan\u2019da step into my world\nIt\u2019s a sociopsychotic state of bliss\nYou\u2019ve been delayed in the real world\nHow many times have you hit and missed?\nYour cat-scan shows disfiguration\nI want to laugh myself to death\nI\u2019ll hold the line while you gasp for breath\nYou want to talk to me\nYou can\u2019t talk to me\nYou don\u2019t understand your sex\nYou ain\u2019t been mindfucked yet\nGuess what I\u2019m doing now\n",
+    "combinations": [
+        "You wan\u2019da step into my world\nIt\u2019s a sociopsychotic state of bliss",
+        "You\u2019ve been delayed in the real world\nHow many times have you hit and missed?",
+        "With a misfired synapse\nWith a bent configuration\nI\u2019ll hold the line while you gasp for breath",
+        "You want to talk to me\nSo talk to me\nYou want to talk to me\nYou want to talk to me\nYou want to talk to me",
+        "You can\u2019t talk to me\nYou don\u2019t understand your sex\nYou ain\u2019t been mindfucked yet",
+        "Let\u2019s do it\nLet\u2019s do it\nLet\u2019s do it\nOh my distorted smile\nGuess what I\u2019m doing now"
+    ]
+}
