@@ -28,7 +28,7 @@ for directory in os.walk("./"):
     songs = [*songs, *directory[2]]
 songs = list(filter(lambda f: f.endswith(".json"), songs))
 
-MULTIPLE_VERSES_PROB = 37
+MULTIPLE_VERSES_PROB = 40
 
 def build_oauth_header(base_url, method, request_parameters):
     """It's been some months since I did this thing. I don't fucking know if there's a lib

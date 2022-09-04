@@ -15,7 +15,7 @@ pull request with any code or lyrics change that you think it's pertinent.
 
 - [x] Use Your Illusion II
 
-- [ ] Chinese Democracy
+- [x] Chinese Democracy
 
 - [ ] The Spaghetti Incident?
 
@@ -24,6 +24,7 @@ pull request with any code or lyrics change that you think it's pertinent.
 #### Running and Forking
 If you,by any reason, wants to run a copy of this bot, maybe with different lyrics, here is the
 informations you need:
+
 The required libs for running this are `requests`, `schedule` and optionally `python_dotenv`. You
 will also need an app with elevated acess on the Twitter plataform, since the endpoints used for
 posting the tweets here are protected from the standard acess level of the API. (I think there are
