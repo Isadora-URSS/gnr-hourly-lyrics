@@ -19,7 +19,9 @@ pull request with any code or lyrics change that you think it's pertinent.
 
 - [ ] The Spaghetti Incident?
 
-- [ ] Leaked songs and demos
+- [x] Singles (Hard Skool and ABSURD)
+
+- [ ] Leaked songs and demos (idk if its worth doing these...)
 
 #### Running and Forking
 If you,by any reason, wants to run a copy of this bot, maybe with different lyrics, here is the

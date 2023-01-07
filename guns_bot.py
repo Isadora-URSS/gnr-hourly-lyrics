@@ -86,7 +86,7 @@ def return_random_line():
     """This method gets a random verse (or a combination of verses) from a random music.
        It also returns info like song name and so.""" 
     chosen_music = random.choice(songs)
-    with open("./Use Your Illusion I/Coma.json", "r") as file:
+    with open(chosen_music, "r") as file:
         song_info = json.load(file)
         payload = { 
             "name": song_info['name'],
@@ -113,7 +113,7 @@ def tweet_a_verse():
         print(f"First response: {tweet}")
         text_info = f"{verse['name']} - {verse['album']}: {' '.join(verse['links'])}"
         if verse['cover']:
-            text_info += f"\nThis song is a {verse['cover_info']['artist']}'s cover: {' '.join(verse['cover_info']['links'])}"
+            text_info += f"\nThis song is a {verse['cover_info']['artist']}’s cover: {' '.join(verse['cover_info']['links'])}"
             tweet = answer_tweet(text_info, tweet['id'])
         tweet = answer_tweet(text_info, tweet['id'])
         print(f"Second response: {tweet}")
