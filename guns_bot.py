@@ -86,7 +86,7 @@ def return_random_line():
     """This method gets a random verse (or a combination of verses) from a random music.
        It also returns info like song name and so.""" 
     chosen_music = random.choice(songs)
-    with open(chosen_music, "r") as file:
+    with open("./Use Your Illusion I/Coma.json", "r") as file:
         song_info = json.load(file)
         payload = { 
             "name": song_info['name'],
@@ -111,15 +111,12 @@ def tweet_a_verse():
         print(f"I'll post these lines: {verse['verse']} - from {verse['name']}")
         tweet = post_tweet(verse['verse'])
         print(f"First response: {tweet}")
-        text_info = f"{verse['name']} from {verse['album']} - {verse['artist']}\n"\
-        f"Listen to it here: {' '.join(verse['links'])}"
+        text_info = f"{verse['name']} - {verse['album']}: {' '.join(verse['links'])}"
+        if verse['cover']:
+            text_info += f"\nThis song is a {verse['cover_info']['artist']}'s cover: {' '.join(verse['cover_info']['links'])}"
+            tweet = answer_tweet(text_info, tweet['id'])
         tweet = answer_tweet(text_info, tweet['id'])
         print(f"Second response: {tweet}")
-        if verse['cover']:
-            text_info = f"This song is a cover. Original artist: {verse['cover_info']['artist']}\n"\
-            f"Listen to it here: {' '.join(verse['cover_info']['links'])}"
-            tweet = answer_tweet(text_info, tweet['id'])
-            print(f"Third response: {tweet}")
         print("I've sucesfully made a post.")
     except Exception as error:
         print(f"Something went wrong. Ill try to post again... Error: {error}")
